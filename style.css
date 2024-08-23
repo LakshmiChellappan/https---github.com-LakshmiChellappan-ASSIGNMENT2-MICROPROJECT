@@ -1,0 +1,219 @@
+/* General Flexbox Layout */
+.nav-group1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #6F6AF7;
+    height: 127px;
+}
+
+/* Adjust Paragraph */
+.nav-group1 p {
+    width: 215px;
+    height: 63px;
+    opacity: 1; /* Ensure it is visible */
+    font-family: 'Delius Unicase', sans-serif;
+    font-size: 2.5rem; /* Use relative units */
+    font-weight: 700;
+    line-height: 1.4; /* Adjust line height for responsiveness */
+    text-align: left;
+    color: #FFFFFF;
+    position: relative; /* Allow Flexbox to control layout */
+    margin: 0;
+}
+
+/* Adjust Navigation List */
+.nav-group1 ul {
+    display: flex;
+    width: auto; /* Adjust for flexibility */
+    height: auto;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem; /* Use relative units */
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    color: #FFFFFF;
+    list-style: none;
+    gap: 30px; /* Adjust gap for better spacing */
+    position: relative; /* Allow Flexbox to control layout */
+    margin: 0;
+}
+
+/* Adjust Image */
+.nav-group1 img {
+   
+    position: relative; /* Allow Flexbox to control layout */
+    left: 10px ;
+    top:2px;
+    width: 10.77px;
+    height: 6px;
+
+}
+
+/* Adjust Search Bar */
+.nav-group1 input[type=text] {
+    width: 314px;
+    height: 57px;
+    opacity: 1; /* Ensure the element is visible */
+    box-sizing: border-box;
+    border-radius: 63px;
+    font-size: 1rem; /* Use relative units */
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: right 10px center; /* Position icon on the right */
+    background-repeat: no-repeat;
+    background-size: 20px 20px; /* Adjust size of the icon */
+    padding: 12px 40px 12px 20px; /* Adjust padding */
+    position: relative; /* Allow Flexbox to control layout */
+    border: 2px solid #ccc;
+}
+
+/* Adjust Layout for Smaller Screens */
+@media (max-width: 768px) {
+    .nav-group1 {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 20px;
+        height: auto; /* Adjust height to content */
+    }
+
+    .nav-group1 p, /* Paragraph */
+    .nav-group1 ul, /* Navigation List */
+    .nav-group1 input[type=text], /* Search Bar */
+    .nav-group1 img { /* Image */
+        width: 100%; /* Make elements take full width */
+        position: relative; /* Ensure Flexbox can control positioning */
+        left: 0;
+        top: 0;
+        margin-bottom: 15px; /* Add spacing between stacked elements */
+    }
+
+    .nav-group1 ul {
+        justify-content: center; /* Center navigation items */
+        gap: 10px; /* Reduce gap for smaller screens */
+        text-align: center;
+    }
+
+    .nav-group1 p {
+        font-size: 2rem; /* Adjust font size */
+        text-align: center; /* Center the text */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-group1 img {
+        width: 12px;  /* Reduce size for smaller screens */
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .nav-group1 img {
+        width: 14px;  /* Adjust size for medium screens */
+        height: auto;
+    }
+}
+
+.main-container {
+    width: 1542px;
+    height: 1695px;
+    margin-top: 289px;
+    background: #FFFFFF;
+    margin-left: 101px;
+}
+
+.main-container img{
+    width: 456px;
+height: 507px;
+top: 289px;
+left: 129px;
+gap: 0px;
+border-radius: 20px 0px 0px 0px;
+opacity: 0px;
+
+}
+
+@media (max-width: 1200px) {
+    .main-container {
+        width: 100% !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        width: 100% !important;
+        margin-top: 150px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        width: 100% !important;
+        margin-top: 100px !important;
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+        height: auto !important;
+    }
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; /* Aligns items vertically */
+    gap: 60px; /* Space between the child elements */
+    position: absolute; /* To position the container */
+    top: 0;
+    left: 630px; /* Adjust as needed */
+    margin-top: 420px; /* Adjust as needed */
+}
+
+.input-container input[type=text] {
+    height: 507px;
+    width: 800px;
+    border-radius: 20px;
+    border: 6px solid #000000;
+    opacity: 1;
+    background-color: #E5D8FF;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 51.82px;
+    text-align: left;
+}
+
+.nav-group1 img[alt="navigation icon"] {
+    width: 67px; /* Adjust the width as needed */
+    height: 46.61px; /* Maintains aspect ratio */
+    margin-top: 5px; /* Adjust spacing above the image */
+    margin-left: 15px; /* Adjust spacing to the left */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    opacity: 0.9; /* Optional: adjusts transparency */
+    cursor: pointer; /* Optional: changes cursor to pointer on hover */
+}
+
+
+.input-container input[type="text"]::placeholder {
+   color: #6F7373;
+    font-size: 30px;
+    line-height: 1.5; /* Adjust line height for better readability */
+    margin-top: 200px;
+}
+
+.main-container img[alt="Social media icons"] {
+    width: 90px;
+    height: 250px;
+    margin-top: 70px; /* Adjust to move closer to the top */
+    left: 850px; /* Positioning relative to the parent container */
+    padding: 0px 16px 0px 8px; /* Removed top padding */
+    gap: 0px;
+    opacity: 1; /* Ensure the image is visible */
+    position: absolute; /* Changed to absolute for precise control */
+    top: 0; /* Moves the image to the top of the containing element */
+}
+
+
