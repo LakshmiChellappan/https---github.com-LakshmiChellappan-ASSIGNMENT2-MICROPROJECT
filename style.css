@@ -91,6 +91,7 @@
     margin-top: 289px;
     background: #FFFFFF;
     margin-left: 101px;
+    justify-content: center;
 }
 
 .main-container img{
@@ -121,15 +122,29 @@ opacity: 0px;
     border: 6px solid #000000;
     opacity: 1;
     background-color: #E5D8FF;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 51.82px;
     text-align: left;
+    padding-left: 60px; /* Add padding to ensure text and placeholder start within the box */
+    padding-bottom: 400px;
+    box-sizing: border-box; /* Ensure padding is included in width/height calculation */
+    
+}
+
+.input-container input[type="text"]::placeholder {
+    color: #6F7373;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 51.86px;
+    opacity: 1; /* Make sure the placeholder is fully opaque */
+    text-align: left;
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden; /* Hides overflow text */
+    text-overflow: ellipsis;
+ 
 }
 
 .nav-group1 img[alt="navigation icon"] {
-    width: 50px !important;/* Adjust the width as needed */
+    width: 40px !important;/* Adjust the width as needed */
     height: auto !important; /* Maintains aspect ratio */
     margin-top: 5px !important; /* Adjust spacing above the image */
     margin-left: 15px !important; /* Adjust spacing to the left */
@@ -138,12 +153,6 @@ opacity: 0px;
     cursor: pointer !important; /* Optional: changes cursor to pointer on hover */
 }
 
-.input-container input[type="text"]::placeholder {
-   color: #6F7373;
-    font-size: 30px;
-    line-height: 1.5; /* Adjust line height for better readability */
-    margin-top: 200px;
-}
 
 .main-container img[alt="Social media icons"] {
     width: 90px;
