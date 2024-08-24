@@ -294,6 +294,7 @@ gap:60px;
         align-items: center; /* Center align all elements */
         padding: 10px; /* Reduce padding */
         height: auto; /* Adjust height to content */
+        width: 470vw; /* Ensure full viewport width */
     }
 
     .nav-group1 p,
