@@ -306,7 +306,7 @@ gap:60px;
     .nav-group1 input[type=text],
     .nav-group1 img {
         flex: 1; /* Keep elements in one line */
-        margin-right: 500px; /* Adjust spacing */
+        margin-right: 5px; /* Adjust spacing */
         max-width: 100% !important; /* Ensure elements don't overflow */
     }
 
