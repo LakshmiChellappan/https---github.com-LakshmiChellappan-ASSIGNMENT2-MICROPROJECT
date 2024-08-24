@@ -6,8 +6,17 @@
     padding: 0 20px;
     background-color: #6F6AF7;
     height: 127px;
-    width: 100%;
+    width: 100%; /* Ensure full width */
+    flex-wrap: nowrap; /* Prevent wrapping to new lines */
 }
+.nav-group1 p,
+.nav-group1 ul,
+.nav-group1 input[type=text],
+.nav-group1 img {
+    flex: inherit; /* Make all elements take equal space */
+    margin-right: 10px; /* Add spacing between elements */
+}
+
 
 /* Adjust Paragraph */
 .nav-group1 p {
@@ -45,7 +54,7 @@
 .nav-group1 img {
    
     position: relative; /* Allow Flexbox to control layout */
-    left: 10px ;
+    left: -70px ;
     top:2px;
     width: 10.77px;
     height: 6px;
@@ -54,22 +63,18 @@
 
 /* Adjust Search Bar */
 .nav-group1 input[type=text] {
-    width: 314px;
+    max-width: 314px; /* Ensure search bar doesn't get too wide */
     height: 57px;
-    opacity: 1; /* Ensure the element is visible */
-    box-sizing: border-box;
     border-radius: 63px;
-    font-size: 1rem; /* Use relative units */
+    font-size: 1rem;
     background-color: white;
     background-image: url('searchicon.png');
-    background-position: right 10px center; /* Position icon on the right */
+    background-position: right 10px center;
     background-repeat: no-repeat;
-    background-size: 20px 20px; /* Adjust size of the icon */
-    padding: 12px 40px 12px 20px; /* Adjust padding */
-    position: relative; /* Allow Flexbox to control layout */
+    background-size: 20px 20px;
+    padding: 12px 40px 12px 20px;
     border: 2px solid #ccc;
 }
-
 
 .main-container {
     width: 1542px;
@@ -115,8 +120,8 @@ opacity: 0px;
 }
 
 .nav-group1 img[alt="navigation icon"] {
-    width: 67px; /* Adjust the width as needed */
-    height: 46.61px; /* Maintains aspect ratio */
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintains aspect ratio */
     margin-top: 5px; /* Adjust spacing above the image */
     margin-left: 15px; /* Adjust spacing to the left */
     border-radius: 5px; /* Optional: adds rounded corners */
@@ -283,42 +288,32 @@ gap:60px;
     font-weight: 700; /* Make labels bold */
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
-    .nav-group1, .main-container {
-        width: 100% !important;
-        margin-top: 150px !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-        height: auto !important;
-    }
-}
-
 @media (max-width: 768px) {
     .nav-group1 {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center align items */
-        padding: 10px; /* Adjust padding for mobile */
-        width: 100%; /* Ensure full width on small screens */
+        padding: 0 10px; /* Reduce padding for smaller screens */
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .nav-group1 p,
+    .nav-group1 ul,
+    .nav-group1 input[type=text],
+    .nav-group1 img {
+        flex: 1; /* Keep elements in one line */
+        margin-right: 5px; /* Adjust spacing */
+        max-width: 100%; /* Ensure elements don't overflow */
     }
 
     .nav-group1 input[type=text] {
-        width: 80%; /* Make search bar responsive */
-        margin-bottom: 15px; /* Add space below search bar */
+        max-width: 200px; /* Reduce search bar width for smaller screens */
+        height: 40px;
+        font-size: 0.9rem; /* Adjust font size */
     }
 }
 
-/* For screens up to 480px */
 @media (max-width: 480px) {
-    .nav-group1, .main-container {
-        width: 100% !important;
-        margin-top: 100px !important;
-        margin-left: 5px !important;
-        margin-right: 5px !important;
-        height: auto !important;
-    }
-
     .nav-group1 input[type=text] {
-        width: 90%; /* Further adjust search bar width for very small screens */
-        margin-bottom: 10px; /* Adjust margin as needed */
+        max-width: 150px; /* Further reduce width on very small screens */
+        height: 35px;
+        font-size: 0.8rem; /* Adjust font size */
     }
 }
