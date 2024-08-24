@@ -316,7 +316,7 @@ gap:60px;
         font-size: 0.9rem; /* Adjust font size */
     }
     .nav-group1 img[alt="navigation icon"] {
-        width: 40px !important; /* Ensure the image is smaller on mobile */
+        width: 20px !important; /* Ensure the image is smaller on mobile */
         max-width: fit-content !important;
     }
 }
