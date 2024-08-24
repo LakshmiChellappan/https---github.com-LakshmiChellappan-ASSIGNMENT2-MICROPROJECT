@@ -3,14 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
     background-color: #6F6AF7;
     height: 127px;
-    width: 100vw; /* Ensure the navbar takes the full viewport width */
-    flex-wrap: nowrap; /* Prevent wrapping to new lines */
-    margin: 0; /* Remove any default margins */
-    padding: 0 20px; /* Add padding for spacing */
-    box-sizing: border-box; /* Include padding and border in the element's total width */
+    width: 100%; /* Ensure the navigation bar takes up the full width */
+    flex-wrap: nowrap; /* Prevent items from wrapping to a new line */
 }
+
 .nav-group1 p,
 .nav-group1 ul,
 .nav-group1 input[type=text],
@@ -122,14 +121,14 @@ opacity: 0px;
 }
 
 .nav-group1 img[alt="navigation icon"] {
-    width: 50px; /* Adjust the width as needed */
-    height: auto; /* Maintains aspect ratio */
+    width: 50px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
     margin-top: 5px; /* Adjust spacing above the image */
     margin-left: 15px; /* Adjust spacing to the left */
-    border-radius: 5px; /* Optional: adds rounded corners */
-    opacity: 0.9; /* Optional: adjusts transparency */
+    border-radius: 5px; /* Add rounded corners */
+    opacity: 0.9; /* Adjust transparency */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
-
 
 .input-container input[type="text"]::placeholder {
    color: #6F7373;
@@ -291,30 +290,35 @@ gap:60px;
 
 @media (max-width: 768px) {
     .nav-group1 {
-        padding: 0 10px; /* Reduce padding for smaller screens */
-        width: 470vw; /* Ensure full viewport width */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align all elements */
+        padding: 10px; /* Reduce padding */
+        height: auto; /* Adjust height to content */
     }
 
     .nav-group1 p,
     .nav-group1 ul,
     .nav-group1 input[type=text],
     .nav-group1 img {
-        flex: 1; /* Keep elements in one line */
-        margin-right: 5px; /* Adjust spacing */
-        max-width: 100% !important; /* Ensure elements don't overflow */
+        width: 100%; /* Make elements take full width */
+        margin-bottom: 10px; /* Add spacing between elements */
+    }
+
+    .nav-group1 ul {
+        display: flex;
+        justify-content: center; /* Center align list items */
+        gap: 10px; /* Add gap between list items */
+        text-align: center; /* Center text */
     }
 
     .nav-group1 input[type=text] {
-        max-width: 200px !important; /* Reduce search bar width for smaller screens */
+        max-width: 100%; /* Ensure search bar takes full width */
         height: 40px;
-        font-size: 0.9rem; /* Adjust font size */
+        font-size: 1rem; /* Adjust font size */
     }
-}
 
-@media (max-width: 480px) {
-    .nav-group1 input[type=text] {
-        max-width: 150px !important; /* Further reduce width on very small screens */
-        height: 35px;
-        font-size: 0.8rem; /* Adjust font size */
+    /* Reduce the size of the navigation icon */
+    .nav-group1 img[alt="navigation icon"] {
+        width: 40px !important; /* Ensure the image is smaller on mobile */
     }
 }
