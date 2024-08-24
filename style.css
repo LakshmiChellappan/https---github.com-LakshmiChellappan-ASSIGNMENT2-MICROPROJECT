@@ -52,10 +52,18 @@
 }
 
 /* Adjust Image */
-.nav-group1 img {
-   
+.nav-group1 img {  
     position: relative; /* Allow Flexbox to control layout */
     left: 1px ;
+    top:2px;
+    width: 10.77px;
+    height: 6px;
+
+}
+
+.nav-group1 img[alt="navigation icon"] {  
+    position: relative; /* Allow Flexbox to control layout */
+    left: -10px !important;
     top:2px;
     width: 10.77px;
     height: 6px;
@@ -306,6 +314,9 @@ gap:60px;
         max-width: 200px !important; /* Reduce search bar width for smaller screens */
         height: 40px;
         font-size: 0.9rem; /* Adjust font size */
+    }
+    .nav-group1 img[alt="navigation icon"] {
+        width: 40px !important; /* Ensure the image is smaller on mobile */
     }
 }
 
